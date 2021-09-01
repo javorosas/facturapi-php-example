@@ -11,9 +11,14 @@ class HomeController extends Controller
 {
   public function index()
   {
-    $facturapi = new Facturapi("TU_API_KEY");
+    $facturapi = new Facturapi("[INSERTA TU API KEY AQUÍ]");
 
-    $receiptData = [
+    $invoiceData = [
+      "customer" => [
+        "legal_name" => "Florentino Fernandez",
+        "tax_id" => "[INSERTA UN RFC AQUI]",
+        "email" => "your@email.com"
+      ],
       "folio_number" => 1234,
       "payment_form" => "03",
       "items" => [
@@ -28,7 +33,8 @@ class HomeController extends Controller
       ]
     ];
 
-    $receipt = $facturapi->Receipts->create($receiptData);
-    return view('receipt', ["receipt" => $receipt]);
+    $invoice = $facturapi->Invoices->create($invoiceData);
+    $facturapi->Invoices->send_by_email($invoice->id);
+    return view('invoice', ["invoice" => json_encode($invoice)]);
   }
 }
