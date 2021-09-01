@@ -1,8 +1,8 @@
 ### How to run
 
-1. Clone this remo
+1. Clone this repo
 2. `cd` into the project folder
-3. Run the following commands
+3. Run the following commands:
 
 ```bash
 composer install
