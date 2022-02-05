@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Facturapi\Facturapi;
+use Exception;
 
 
 class HomeController extends Controller
@@ -17,7 +18,11 @@ class HomeController extends Controller
       "customer" => [
         "legal_name" => "Florentino Fernandez",
         "tax_id" => "[INSERTA UN RFC AQUI]",
-        "email" => "your@email.com"
+        "tax_system" => "621",
+        "email" => "your@email.com",
+        "address" => [
+          "zip" => "83240"
+        ]
       ],
       "folio_number" => 1234,
       "payment_form" => "03",
@@ -33,8 +38,12 @@ class HomeController extends Controller
       ]
     ];
 
-    $invoice = $facturapi->Invoices->create($invoiceData);
-    $facturapi->Invoices->send_by_email($invoice->id);
-    return view('invoice', ["invoice" => json_encode($invoice)]);
+    try {
+      $invoice = $facturapi->Invoices->create($invoiceData);
+      return view('invoice', ["invoice" => json_encode($invoice)]);
+      $facturapi->Invoices->send_by_email($invoice->id);
+    } catch (Exception $e) {
+      return view('invoice', ["invoice" => json_encode($e)]);
+    }
   }
 }

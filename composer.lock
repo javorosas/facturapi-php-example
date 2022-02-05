@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "deec5742e8f9e1e076fc67696d41b010",
+    "content-hash": "0efb7515fdd2aff40e89b30f6cf430d4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -433,16 +433,16 @@
         },
         {
             "name": "facturapi/facturapi-php",
-            "version": "1.6.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FacturAPI/facturapi-php.git",
-                "reference": "e95c33f4a3905c8e718d5e620fbba7a16e4e384d"
+                "reference": "bbe829abb89242b0fa4a5b6cd322ded833e15879"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FacturAPI/facturapi-php/zipball/e95c33f4a3905c8e718d5e620fbba7a16e4e384d",
-                "reference": "e95c33f4a3905c8e718d5e620fbba7a16e4e384d",
+                "url": "https://api.github.com/repos/FacturAPI/facturapi-php/zipball/bbe829abb89242b0fa4a5b6cd322ded833e15879",
+                "reference": "bbe829abb89242b0fa4a5b6cd322ded833e15879",
                 "shasum": ""
             },
             "require": {
@@ -481,9 +481,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FacturAPI/facturapi-php/issues",
-                "source": "https://github.com/FacturAPI/facturapi-php/tree/1.6.1"
+                "source": "https://github.com/FacturAPI/facturapi-php/tree/2.0.0"
             },
-            "time": "2021-09-01T16:41:41+00:00"
+            "time": "2022-01-31T19:25:14+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -7007,5 +7007,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
