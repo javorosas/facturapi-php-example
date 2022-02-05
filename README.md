@@ -1,4 +1,4 @@
-### How to run
+## Step 1: Install dependencies
 
 1. Clone this repo
 2. `cd` into the project folder
@@ -10,6 +10,10 @@ php artisan key:generate
 php artisan serve
 ```
 
-### Where's the interesting part?
+## Step 2: Edit the example
 
-Check out [app/Http/Controllers/HomeController.php](app/Http/Controllers/HomeController.php)
+Open [app/Http/Controllers/HomeController.php](app/Http/Controllers/HomeController.php) with your favorite editor and replace the placeholders in the example with your API Keys and customer information
+
+## Step 3: Run the example
+
+Visit [http://localhost:8000](http://localhost:8000) in your browser to see either the resulting invoice or the error objects.
